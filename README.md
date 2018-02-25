@@ -4,19 +4,23 @@ CSS дійсно розвивався протягом багатьох рокі
 
 Інша річ, яка мені подобається в CSS анімації - це непогана підтримка браузерами. На даний час кожен повноцінний браузер, окрім Opera-Mini (якщо можна його вважати повноцінним браузером) має підтримку СSS анімації.
 
+
 ![CSS Animation MDN](https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png)
+
 
 Отже, тепер, коли ви знаєте, чому анімації CSS3 - це хороший інструмент у вашому ящику, почніть його використовувати.
 
 Все починається з властивостей анімації для елемента. Властивість *animation* насправді є скороченням для цілого ряду інших властивостей. Синтаксис скорочень виглядає наступним чином:
 
 `
+
 animation: duration | timing-function | delay | <br>iteration-count | direction | fill-mode | play-state | name;
+
 `
 
 Якщо вам здається що це надто багато не хвилюйтесь. Я поясню кожну підвластивість одна за одною.
 
-* *animation-duration:* Час тривалості анімації. За замовчуванням 0,5 секунди - не дуже швидко і не дуже повільно;
+* **animation-duration:** Час тривалості анімації. За замовчуванням 0,5 секунди - не дуже швидко і не дуже повільно;
     
 * **animation-timing-function:** Це те ж саме, що і функція синхронізації, яка використовується для переходів, визначає, наскільки швидко анімація рухається в   залежності від того, наскільки прогресує анімація. Наприклад  ease-in-out означає, що анімація буде повільніша на початку та в кінці анімаційної шкали часу. Щоб побачити  гарну візуалізацію функцій синхронізації відвідайте [цей сайт](http://easings.net/uk).
  
@@ -27,7 +31,7 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 * **animation-direction:** Ця властивість описує поведінку анімації між циклами. Значеннями цієї властивості можуть бути: *normal*, *reverse*, *alternate*, and *alternate-reverse*. Спочатку важко зрозуміти, тому я поясню більш докладніше:*Normal* означає, що анімація починатиметься спочатку на кожному циклі або ітерації. Іншими словами анімація відтворюватиметься від початку до кінця на кожному циклі. *Reverse* - анімація відтворюватиметься в зворотньому порядку. *Alternate* - анімація буде відтворюватись спочатку в прямому а потім зворотньому порядку, чергуючи. *Alternate-reverse*  означає, що анімація робить це перший цикл у зворотному напрямку, а потім у прямому і в подальшому чергується в такому ж порядку.
 
 * **animation-fill-mode:** Визначає стилі, які мають застосовутись до елементу, коли анімація не виконується (якщо кількість циклів не безмежна). Дозволяє встановити стиль елементу, що відповідатиме стилю останнього ключового кадру анімації, що залежить вiд **animation-fill-mode**, **animation-direction** i **animation-iteration-count**. Зв’язок між усіма властивостями найкращще проілюстрований  [в цих маленьких приємних табличках, зроблених Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode). В редакторі нижче зверніть увагу, як елемент із fill-mode forward залишається в тому ж  місці після завершення анімації.
-[link](https://codepen.io/afrench53198/embed/preview/bLYXLR?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F38f4970a90124d3303602c8e4b0e4e8c%3FpostId%3D985a2404dc5e&slug-hash=bLYXLR)
+[DEMO](https://codepen.io/afrench53198/embed/preview/bLYXLR?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F38f4970a90124d3303602c8e4b0e4e8c%3FpostId%3D985a2404dc5e&slug-hash=bLYXLR)
  
  * **animation-play-state:** Основна функція цієї властивості -  відслідковувати, чи працює анімація чи призупинена. Це дозволяє призупинити анімацію і зберігати     її в поточному стані, а потім запускати її з цього стану. Це можна зробити, використовуючи ці два короткі блоки коду:
    
@@ -51,9 +55,8 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
          element.classList.toggle("paused")
      }
    ```
-  
-Все це робить додавання класу .paused до відповідного елементу: зупиняє та відновлює анімацію натисканням кнопки. Перевірте поле 1 в редакторі, щоб отримати правильне уявлення про те, як це буде працювати в реальному контексті анімації.
-[link](https://codepen.io/afrench53198/embed/preview/EQKyWL?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F8edddeb361e2ed32080603becfb5c540%3FpostId%3D985a2404dc5e&slug-hash=EQKyWL)  
+
+Додавання класу *.paused* до відповідного елементу зупиняє та відновлює анімацію натисканням кнопки. Перевірте поле  в [редакторі](https://codepen.io/afrench53198/embed/preview/EQKyWL?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F8edddeb361e2ed32080603becfb5c540%3FpostId%3D985a2404dc5e&slug-hash=EQKyWL), щоб отримати правильне уявлення про те, як це буде працювати в реальному контексті анімації. 
  
  Чудово! Тепер, коли ви знаєте всі ці властивості, перейдемо до останньої (і найважливішої) підвластивості анімації: name.
 Назва анімації виглядає як ім'я змінної або класу; це стосується поведінки анімації. Якщо ви робите анімацію вперше то для є необхідність для початку освоїти іншу тему…
@@ -69,14 +72,84 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 
 Ну, на  початку, у вас буде щось на зразок цього:
 
+```javascript
+/*  From-to format */
+@keyframes <animation-name> {
+  from {
+    <beginning-property-state>
+  } to  {
+    <end-property-state>
+  }
+}
+/*  Percentage format */
+@keyframes <animation-name> {
+  0% {
+    <beginning-property-state>
+  } 
+ 50% {
+    <transitioning-property-state>
+  }
+/* you can go percentage point by point - thats alot of detail!!*/
+  51% {
+    <transitioning-property-state>
+  }
+  75% {
+    <transitioning-property-state>
+  }
+  100% {
+    <end-property-state>
+  }
+}
+```
+
 Це досить очевидно. Ви просто вказуєте стан властивості, яку ви хочете анімувати на визначеній точці під час анімації. Так це виглядає на практиці:
 
-Дивіться цей код у дії, натиснувши "Показати"!
+```javascript
+/*the element in this animation will bounce into view by changing the transform property*/
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%)
+  }
+  15% {
+    transform: translateY(0%);
+  }
+  30% {
+    transform: translateY(-30%);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-10%)
+  }
+  90% {
+    transform: translateY(-5%)
+  }
+  95% {
+    transform: translateY(0%)
+  }
+  97% {
+    transform: translateY(-2%)
+  }
+  100% {
+    transform: translateY(0%)
+  }
+}
+```
+
+Дивіться цей код у дії, натиснувши [Показати](https://codepen.io/afrench53198/embed/preview/EQKyWL?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F8edddeb361e2ed32080603becfb5c540%3FpostId%3D985a2404dc5e&slug-hash=EQKyWL)
 
 Тепер, коли ви знаєте, як створювати чудові анімації за допомогою ключових кадрів CSS, як ви керуєте цими анімаціями? Саме тут Javascript корисний.
+
 Я покажу вам метод, за допомогою якого я це роблю, але я закликаю вас експериментувати та придумати більш багаторазові та більш чисті рішення. 
 
-Це чотири етапи процесу:
+**Це чотири етапи процесу:**
 
 1. Створіть анімацію
 
@@ -131,6 +204,7 @@ buttonOne.onclick = function() {
 };
 ```
 
-Весь необхідний код (з деяким стилями), щоб зробити вікно та кнопку наведений в редакторі нижче.
+Весь необхідний код (з деяким стилями), щоб зробити вікно та кнопку наведений [тут](https://codepen.io/afrench53198/embed/preview/EQKyWL?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F8edddeb361e2ed32080603becfb5c540%3FpostId%3D985a2404dc5e&slug-hash=EQKyWL).
+
 Хоча це моє рішення в даний час, але безумовно, не найкраще. Codepen мав труднощі з методом addEventListener у Javascript, але це чудовий спосіб обробляти стан анімації, про що я міг би говорити в окремій статті. Я закликаю вас шукати більш кращі, більш модульні способи створення та управління анімаціями в CSS та Javascript. Якщо у вас є кращий спосіб, надішліть його в коментарі! Я завжди шукаю способи написання більш чистого і багаторазового використовуваного коду. Я сподіваюся, вам сподобалося читати! Якщо ця стаття допомагла вам, то кілька уподобань буде чудовою подякою:)
 
