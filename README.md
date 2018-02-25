@@ -43,11 +43,16 @@ CSS дійсно розвивався протягом багатьох рокі
     Основна функція цієї властивості -  відслідковувати, чи працює анімація чи призупинена. Це дозволяє призупинити анімацію і зберігати     її в поточному стані, а потім запускати її з цього стану. Це можна зробити, використовуючи ці два короткі блоки коду:
     <b>CSS:<b>
     <pre>.paused {<br>  animation-play-state: paused;<br>}</pre>
-      <b>JS:</b>
-      <pre name="4e4d" id="4e4d" class="graf graf--pre graf-after--p">// Get references to element and controlling button<br>var element = document.querySelector(".element"), button = document.querySelector(".buttonForElement"); </pre>
-      <pre name="0f55" id="0f55" class="graf graf--pre graf-after--pre">// toggle the paused class! <br>button.onclick = function () {</pre>
-      <pre name="8179" id="8179" class="graf graf--pre graf-after--pre">  element.classList.toggle("paused")</pre>
-      <pre name="0a3a" id="0a3a" class="graf graf--pre graf-after--pre">}</pre>
+    <b>JS:</b>
+    <pre name="4e4d" id="4e4d" class="graf graf--pre graf-after--p">
+     // Get references to element and controlling button<br>
+     var element = document.querySelector(".element"),
+     button = document.querySelector(".buttonForElement");
+     // toggle the paused class! <br>
+     button.onclick = function () {
+         element.classList.toggle("paused")
+     }
+     </pre>
   </li>
 </ul>
   
