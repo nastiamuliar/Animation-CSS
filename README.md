@@ -123,7 +123,7 @@ animation: duration | timing-function | delay | iteration-count | direction | fi
 
 Ну, на  початку, у вас буде щось на зразок цього:
 
-```javascript
+```css
 /*  From-to format */
 @keyframes <animation-name> {
   from {
