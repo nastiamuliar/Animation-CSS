@@ -12,9 +12,9 @@ CSS дійсно розвивався протягом багатьох рокі
 
 Все починається з властивостей анімації для елемента. Властивість *animation* насправді є скороченням для цілого ряду інших властивостей. Синтаксис скорочень виглядає наступним чином:
 
-`
-animation: duration | timing-function | delay | <br>iteration-count | direction | fill-mode | play-state | name;
-`
+```css
+animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name;
+```
 
 Якщо вам здається що це надто багато не хвилюйтесь. Я поясню кожну підвластивість одна за одною.
 
@@ -30,7 +30,7 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 
 * **animation-fill-mode:** Визначає стилі, які мають застосовутись до елементу, коли анімація не виконується (якщо кількість циклів не безмежна). Дозволяє встановити стиль елементу, що відповідатиме стилю останнього ключового кадру анімації, що залежить вiд **animation-fill-mode**, **animation-direction** i **animation-iteration-count**. Зв’язок між усіма властивостями найкращще проілюстрований  [в цих маленьких приємних табличках, зроблених Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode). В коді нижче зверніть увагу, як елемент із fill-mode forward залишається в тому ж  місці після завершення анімації.
 
-```
+```html
 <div class="container">
   <div class="none box">No fill mode!</div>
   <div class="forwards box">Forward!</div>
@@ -39,7 +39,7 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 </div> 
 ```
 
-```javascript
+```css
 .container {
   display: grid;
   justify-items:center;
@@ -88,15 +88,15 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
    
 *CSS:*
 
-   `
-   .paused {
-      animation-play-state: paused;
-    }
-   `
+```css
+.paused {
+    animation-play-state: paused;
+}
+```
    
- *JS:*
+*JS:*
  
- ```javascript
+```javascript
  // Get references to element and controlling button
     var element = document.querySelector(".element"),
     button = document.querySelector(".buttonForElement");
@@ -215,7 +215,7 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
  ```
 2. Додайте доступний клас CSS для перемикання за допомогою JS
 
-`
+```css
 .activated {
   box-shadow: 0px 0px 30px black;
   transform: perspective(500px);
@@ -227,7 +227,7 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 .paused {
   animation-play-state: paused;
 }
-`
+```
 3. За допомогою JS отримайте кнопку керування і/або власне елемент (однак ти хочеш керувати анімацією)
 
 ```javascript
