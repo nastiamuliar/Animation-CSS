@@ -1,9 +1,10 @@
 # <a href="https://codeburst.io/learning-css-animations-with-a-touch-of-javascript-985a2404dc5e">CSS анімація</a>
+
 CSS дійсно розвивався протягом багатьох років. У минулому його можно було використовувати лише для зміни простих статичних властивостей, таких як колір, розмір та стиль рамки . Він постійно вдосконалюється , і зараз ми знаходимось в точці, де можоивсті css анімації конкурують з JavaScript. Король мов веб розробки стає узурпованим(Влада короля мов веб розробки  в області анімації захоплена). Так, це звичайно перебільшення, але використання css анімації має багато переваг. Вони прості у використанні, без використання  таємничого js синтаксису (хоча API веб-анімації  повинна допомогти суровим js розробникам).CSS використовує удосконалену підтримку браузера та інтеграцію для автоматичної оптимізації при великих навантаженнях. Одна з речей, яку я ціную - це декларативний характер CSS при створенні анімації, та можливість вказати де буде анімація на кожному ключовому кадрі. Це полегшує візуалізацію коду.
 
 Інша річ, яка мені подобається в CSS анімації це непогана підтримка браузерами. На даний час кожен повноцінний браузер, окрім Opera-Mini (ци можна його вважати повноцінним браузером) має підтримку СSS анімації.
 
-<img class="progressiveMedia-image js-progressiveMedia-image" data-src="https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png" src="https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png">
+![CSS Animation MDN](https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png" src="https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png)
 
 Отже, тепер, коли ви знаєте, чому анімації CSS3 - це хороший інструмент у вашому ящику, почніть його використовувати.
 
@@ -41,10 +42,14 @@ CSS дійсно розвивався протягом багатьох рокі
   <li>
     <b>animation-play-state:</b>
     Основна функція цієї властивості -  відслідковувати, чи працює анімація чи призупинена. Це дозволяє призупинити анімацію і зберігати     її в поточному стані, а потім запускати її з цього стану. Це можна зробити, використовуючи ці два короткі блоки коду:
-    <b>CSS:<b>
-    <pre>.paused {<br>  animation-play-state: paused;<br>}</pre>
-    <b>JS:</b>
-    <pre name="4e4d" id="4e4d" class="graf graf--pre graf-after--p">
+   *CSS:*
+      ```javascript
+      .paused {
+        animation-play-state: paused;
+      }
+    ```
+    *JS:*
+    
      // Get references to element and controlling button
      var element = document.querySelector(".element"),
      button = document.querySelector(".buttonForElement");
@@ -52,7 +57,7 @@ CSS дійсно розвивався протягом багатьох рокі
      button.onclick = function () {
          element.classList.toggle("paused")
      }
-     </pre>
+   ```
   </li>
 </ul>
   
