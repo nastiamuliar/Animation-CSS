@@ -24,12 +24,7 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 
 * **animation-iteration-count:** Кількість циклів (повторів) анімації. Ця  властивість переплітається animation-direction. Ви також можете використовувати десяткові значення: якщо ви встановили анімацію, що здійснює поворот на 360 градусів, то значення 2.5 означатиме що поворот здійсниться на 180 градусів. Поєднання animation-direction і animation-iteration-count є хорошою можливістю для розуміння анімації. Для того щоб спробувати створити власну анімацію з використанням animation-direction і animation-iteration-count властивостей перейдіть по [наступній ссилці](https://codepen.io/afrench53198/embed/preview/bLYXLR?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F38f4970a90124d3303602c8e4b0e4e8c%3FpostId%3D985a2404dc5e&slug-hash=bLYXLR")
   
-* **animation-direction:** Ця властивість описує поведінку анімації між циклами. Значеннями цієї властивості можуть бути: *normal*, *reverse*, *alternate*, and *alternate-reverse*. Спочатку важко зрозуміти, тому я поясню більш докладніше:
-
-*Normal* означає, що анімація починатиметься спочатку на кожному циклі або ітерації. Іншими словами анімація відтворюватиметься від початку до кінця на кожному циклі.                
-*Reverse* - анімація відтворюватиметься в зворотньому порядку. 
-*Alternate* - анімація буде відтворюватись спочатку в прямому а потім зворотньому порядку, чергуючи.
-*Alternate-reverse*  означає, що анімація робить це перший цикл у зворотному напрямку, а потім у прямому і в подальшому чергується в такому ж порядку.
+* **animation-direction:** Ця властивість описує поведінку анімації між циклами. Значеннями цієї властивості можуть бути: *normal*, *reverse*, *alternate*, and *alternate-reverse*. Спочатку важко зрозуміти, тому я поясню більш докладніше:*Normal* означає, що анімація починатиметься спочатку на кожному циклі або ітерації. Іншими словами анімація відтворюватиметься від початку до кінця на кожному циклі. *Reverse* - анімація відтворюватиметься в зворотньому порядку. *Alternate* - анімація буде відтворюватись спочатку в прямому а потім зворотньому порядку, чергуючи. *Alternate-reverse*  означає, що анімація робить це перший цикл у зворотному напрямку, а потім у прямому і в подальшому чергується в такому ж порядку.
 
 * **animation-fill-mode:** Визначає стилі, які мають застосовутись до елементу, коли анімація не виконується (якщо кількість циклів не безмежна). Дозволяє встановити стиль елементу, що відповідатиме стилю останнього ключового кадру анімації, що залежить вiд **animation-fill-mode**, **animation-direction** i **animation-iteration-count**. Зв’язок між усіма властивостями найкращще проілюстрований  [в цих маленьких приємних табличках, зроблених Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode). В редакторі нижче зверніть увагу, як елемент із fill-mode forward залишається в тому ж  місці після завершення анімації.
 [link](https://codepen.io/afrench53198/embed/preview/bLYXLR?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F38f4970a90124d3303602c8e4b0e4e8c%3FpostId%3D985a2404dc5e&slug-hash=bLYXLR)
@@ -37,12 +32,15 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
  * **animation-play-state:** Основна функція цієї властивості -  відслідковувати, чи працює анімація чи призупинена. Це дозволяє призупинити анімацію і зберігати     її в поточному стані, а потім запускати її з цього стану. Це можна зробити, використовуючи ці два короткі блоки коду:
    
 *CSS:*
+
    `
    .paused {
       animation-play-state: paused;
     }
    `
+   
  *JS:*
+ 
  ```javascript
      // Get references to element and controlling button
      var element = document.querySelector(".element"),
@@ -53,8 +51,6 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
          element.classList.toggle("paused")
      }
    ```
-  </li>
-</ul>
   
 Все це робить додавання класу .paused до відповідного елементу: зупиняє та відновлює анімацію натисканням кнопки. Перевірте поле 1 в редакторі, щоб отримати правильне уявлення про те, як це буде працювати в реальному контексті анімації.
 [link](https://codepen.io/afrench53198/embed/preview/EQKyWL?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F8edddeb361e2ed32080603becfb5c540%3FpostId%3D985a2404dc5e&slug-hash=EQKyWL)  
@@ -62,12 +58,12 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
  Чудово! Тепер, коли ви знаєте всі ці властивості, перейдемо до останньої (і найважливішої) підвластивості анімації: name.
 Назва анімації виглядає як ім'я змінної або класу; це стосується поведінки анімації. Якщо ви робите анімацію вперше то для є необхідність для початку освоїти іншу тему…
 
-`@keyframes!`
+### @keyframes!
 
 Так .. що таке правило @keyframes?
 
 Я справді не хочу робити спроби пояснити це, тому MDN зробить це за мене:
->"@keyframes CSS at-правила  керують проміжними кроками в анімаційній послідовності CSS, визначаючи стилі для ключових кадрів (або точок >доступу) уздовж анімаційної послідовності. Це дає більший контроль над проміжними кроками анімаційної послідовності, ніж переходи. "
+>@keyframes CSS at-правила  керують проміжними кроками в анімаційній послідовності CSS, визначаючи стилі для ключових кадрів (або точок доступу) уздовж анімаційної послідовності. Це дає більший контроль над проміжними кроками анімаційної послідовності, ніж переходи.
 
 Отже, ми знаємо, що основні кадри - це спосіб надати чіткий контроль над анімацією в CSS. Як точно їх використовувати?
 
@@ -83,10 +79,57 @@ animation: duration | timing-function | delay | <br>iteration-count | direction 
 Це чотири етапи процесу:
 
 1. Створіть анімацію
-`
+
+ ```javascript
+ @keyframes rotate {
+  from {
+    transform: rotateY(0deg)
+  } to {
+    transform: rotateY(360deg)
+  }
+}
+ ```
 2. Додайте доступний клас CSS для перемикання за допомогою JS
+
+`
+.activated {
+  box-shadow: 0px 0px 30px black;
+  transform: perspective(500px);
+  transition: all ease-out 0.5s;
+  animation: rotate 1s infinite ease-in-out;
+  animation-delay: 0.5s;
+}
+/*Don't forget the paused class if you want to be able to stop the animation to stop mid-go!*/
+.paused {
+  animation-play-state: paused;
+}
+`
 3. За допомогою JS отримайте кнопку керування і/або власне елемент (однак ти хочеш керувати анімацією)
+
+```javascript
+var box1 = document.querySelector("#b1");
+var buttonOne = document.querySelector("#animateOne");
+```
 4 .Об’єднайте це разом , міняючи клас за допомогою стану елементу/кнопки
+
+```javascript
+// Here I use the button's inner HTML to track the state of the element, as the two have a hard coded relationship
+buttonOne.onclick = function() {
+  if (buttonOne.innerHTML === "Play") {
+    this.innerHTML = "Pause";
+    box1.innerHTML = "Not So fast!";
+    // for the first time clicked, add the class
+    if (!box1.classList.contains("activated")) {
+      box1.classList.add("activated");
+    }
+    box1.classList.toggle("paused");
+  } else {
+    buttonOne.innerHTML = "Play";
+    box1.innerHTML = "Spin me!";
+    box1.classList.toggle("paused");
+  }
+};
+```
 
 Весь необхідний код (з деяким стилями), щоб зробити вікно та кнопку наведений в редакторі нижче.
 Хоча це моє рішення в даний час, але безумовно, не найкраще. Codepen мав труднощі з методом addEventListener у Javascript, але це чудовий спосіб обробляти стан анімації, про що я міг би говорити в окремій статті. Я закликаю вас шукати більш кращі, більш модульні способи створення та управління анімаціями в CSS та Javascript. Якщо у вас є кращий спосіб, надішліть його в коментарі! Я завжди шукаю способи написання більш чистого і багаторазового використовуваного коду. Я сподіваюся, вам сподобалося читати! Якщо ця стаття допомагла вам, то кілька уподобань буде чудовою подякою:)
