@@ -28,7 +28,6 @@ CSS дійсно розвивався протягом багатьох рокі
   <li>
     <b>animation-iteration-count:</b>
     Кількість циклів (повторів) анімації. Ця  властивість переплітається animation-direction. Ви також можете використовувати десяткові     значення: якщо ви встановили анімацію, що здійснює поворот на 360 градусів, то значення 2.5 означатиме що поворот здійсниться на 180     градусів. Поєднання animation-direction і animation-iteration-count є хорошою можливістю для розуміння анімації. Для того щоб           спробувати створити власну анімацію з використанням animation-direction і animation-iteration-count властивостей перейдіть по           <a href="https://codepen.io/afrench53198/embed/preview/bLYXLR?default-tabs=css%2Cresult&embed-version=2&height=600&host=https%3A%2F%2Fcodepen.io&referrer=https%3A%2F%2Fcodeburst.io%2Fmedia%2F38f4970a90124d3303602c8e4b0e4e8c%3FpostId%3D985a2404dc5e&slug-hash=bLYXLR"v target="_blank">найступній ссилці</a>
-   
   </li>
   <li>
     <b>animation-direction:</b>
@@ -44,11 +43,11 @@ CSS дійсно розвивався протягом багатьох рокі
     Основна функція цієї властивості -  відслідковувати, чи працює анімація чи призупинена. Це дозволяє призупинити анімацію і зберігати     її в поточному стані, а потім запускати її з цього стану. Це можна зробити, використовуючи ці два короткі блоки коду:
     <b>CSS:<b>
     <pre>.paused {<br>  animation-play-state: paused;<br>}</pre>
-    <b>JS:</b>
-    <pre>// Get references to element and controlling button<br>var element = document.querySelector(".element"), button = document.querySelector(".buttonForElement"); </pre>
-      <pre>// toggle the paused class! <br>button.onclick = function () {</pre>
-      <pre>  element.classList.toggle("paused")</pre>
-      <pre>}</pre>
+      <b>JS:</b>
+      <pre name="4e4d" id="4e4d" class="graf graf--pre graf-after--p">// Get references to element and controlling button<br>var element = document.querySelector(".element"), button = document.querySelector(".buttonForElement"); </pre>
+      <pre name="0f55" id="0f55" class="graf graf--pre graf-after--pre">// toggle the paused class! <br>button.onclick = function () {</pre>
+      <pre name="8179" id="8179" class="graf graf--pre graf-after--pre">  element.classList.toggle("paused")</pre>
+      <pre name="0a3a" id="0a3a" class="graf graf--pre graf-after--pre">}</pre>
   </li>
 </ul>
   
