@@ -4,7 +4,7 @@ CSS дійсно розвивався протягом багатьох рокі
 
 Інша річ, яка мені подобається в CSS анімації це непогана підтримка браузерами. На даний час кожен повноцінний браузер, окрім Opera-Mini (ци можна його вважати повноцінним браузером) має підтримку СSS анімації.
 
-![CSS Animation MDN](https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png" src="https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png)
+![CSS Animation MDN](https://cdn-images-1.medium.com/max/800/1*-h8ZRKUONNb5iMegkGDzXw.png)
 
 Отже, тепер, коли ви знаєте, чому анімації CSS3 - це хороший інструмент у вашому ящику, почніть його використовувати.
 
