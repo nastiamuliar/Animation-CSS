@@ -45,10 +45,10 @@ CSS дійсно розвивався протягом багатьох рокі
     <pre>.paused {<br>  animation-play-state: paused;<br>}</pre>
     <b>JS:</b>
     <pre name="4e4d" id="4e4d" class="graf graf--pre graf-after--p">
-     // Get references to element and controlling button<br>
+     // Get references to element and controlling button
      var element = document.querySelector(".element"),
      button = document.querySelector(".buttonForElement");
-     // toggle the paused class! <br>
+     // toggle the paused class
      button.onclick = function () {
          element.classList.toggle("paused")
      }
